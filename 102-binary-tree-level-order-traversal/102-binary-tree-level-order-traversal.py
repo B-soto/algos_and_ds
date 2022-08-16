@@ -14,13 +14,13 @@ class Solution:
         
         while q:
             curr, depth = q.pop(0)
-            data = curr.val
+            # data = curr.val
             if depth not in seen_level:
                 return_list.append(this_level)
-                this_level = [data]
+                this_level = [curr.val]
                 seen_level.add(depth)
             else:
-                this_level.append(data)
+                this_level.append(curr.val)
             
             if curr.left:
                 q.append((curr.left, depth+1))
