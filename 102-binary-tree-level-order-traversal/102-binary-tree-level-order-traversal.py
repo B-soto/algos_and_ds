@@ -7,10 +7,9 @@
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root: return []
-        level = 0
-        q = [(root,level)]
+        q = [(root,0)]
         return_list = []
-        seen_level = {level}
+        seen_level = {0}
         this_level = []
         
         while q:
