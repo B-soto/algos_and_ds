@@ -19,10 +19,7 @@ class Solution:
             
             if curr_node.left: queue.append((curr_node.left,level+1))
             if curr_node.right: queue.append((curr_node.right,level+1))
-            
-            
-        
-        
+
         return total_sum
         
         
