@@ -1,7 +1,5 @@
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        if nums[0] >= 0:
-            return [n*n for n in nums]
         negative_stack = []
         positive_nums = []
         rtn_arr = []
