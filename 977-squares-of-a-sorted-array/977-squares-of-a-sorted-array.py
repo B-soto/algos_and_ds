@@ -30,6 +30,6 @@ class Solution:
         while negative_index > -1:
             rtn_arr.append(negative_stack[negative_index] * negative_stack[negative_index])
             negative_index -= 1
-        print(rtn_arr,negative_stack, positive_nums)
+        # print(rtn_arr,negative_stack, positive_nums)
         return rtn_arr
                 
