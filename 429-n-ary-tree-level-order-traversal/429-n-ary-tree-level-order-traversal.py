@@ -31,14 +31,17 @@ class Solution:
 
         while this_level:
             this_level_values = []
-            for node in this_level:
-                this_level_values.append(node.val)
-            all_levels.append(this_level_values)
-
             next_level_nodes = []
             for node in this_level:
+                this_level_values.append(node.val)
                 if node.children:
                     next_level_nodes += node.children
+            all_levels.append(this_level_values)
+
+            # next_level_nodes = []
+            # for node in this_level:
+            #     if node.children:
+            #         next_level_nodes += node.children
             this_level = next_level_nodes  
         return all_levels
         
