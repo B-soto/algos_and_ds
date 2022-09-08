@@ -11,14 +11,10 @@ class Solution:
             else:
                 l = mid+1
                 
-        
-        
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        # print('starting')
         if len(nums) == 0 or target not in set(nums):
             return [-1,-1]
         target_found_at_index = self.binary_search(nums,target)
-        # print(target_found_at_index)
         start = target_found_at_index
         end = target_found_at_index
         
