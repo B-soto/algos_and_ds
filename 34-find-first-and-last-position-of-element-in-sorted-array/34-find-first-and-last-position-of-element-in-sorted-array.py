@@ -1,3 +1,4 @@
+#REWRITE, with (nlogn)... the set we are making is O(n)
 class Solution:
     def binary_search(self, arr: List[int], target: int) -> int:        
         l = 0
@@ -10,11 +11,15 @@ class Solution:
                 r = mid-1
             else:
                 l = mid+1
+        return -1
                 
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        if len(nums) == 0 or target not in set(nums):
+        if len(nums) == 0 :
             return [-1,-1]
         target_found_at_index = self.binary_search(nums,target)
+        if target_found_at_index == -1:
+            return [-1,-1]
+        
         start = target_found_at_index
         end = target_found_at_index
         
