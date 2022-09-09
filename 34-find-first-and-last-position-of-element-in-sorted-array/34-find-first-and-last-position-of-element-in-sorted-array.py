@@ -1,4 +1,3 @@
-#REWRITE, with (nlogn)... the set we are making is O(n)
 class Solution:
     def binary_search(self, arr: List[int], target: int) -> int:        
         l = 0
