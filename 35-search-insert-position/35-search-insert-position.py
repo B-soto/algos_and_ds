@@ -15,7 +15,6 @@ class Solution:
             else:
                 l = mid+1
         
-        if target > arr[mid]:
-            return mid +1
-        else:
-            return mid
+        
+        return mid +1 if target > arr[mid] else mid
+        
