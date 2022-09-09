@@ -17,11 +17,11 @@ class Solution:
         if len(nums) == 0 :
             return [-1,-1]
         target_found_at_index = self.binary_search(nums,target)
+        
         if target_found_at_index == -1:
             return [-1,-1]
         
-        start = target_found_at_index
-        end = target_found_at_index
+        start, end = target_found_at_index, target_found_at_index
         
         while start > 0 and nums[start-1] == target:
             start -= 1
