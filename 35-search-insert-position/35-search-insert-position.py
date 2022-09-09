@@ -1,6 +1,6 @@
 class Solution:
     def searchInsert(self, arr: List[int], target: int) -> int:
-        # if target > arr[-1]: return len(arr)
+        if target > arr[-1]: return len(arr)
         if target < arr[0]: return 0
         r = len(arr)-1
         l = 0
