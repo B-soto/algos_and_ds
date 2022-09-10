@@ -9,6 +9,7 @@ UNION
 (SELECT Salaries.employee_id FROM Salaries 
 LEFT JOIN Employees
 ON Salaries.employee_id = Employees.employee_id
-WHERE name is null )
+WHERE name is null)
+
 ORDER BY employee_id
 
