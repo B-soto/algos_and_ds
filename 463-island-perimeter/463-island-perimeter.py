@@ -42,10 +42,7 @@ class Solution:
                         if (x+x1, y+y1) not in visited:
                             stack.append((x+x1, y+y1))
                             visited.add((x+x1, y+y1))
-                
-                
-                
-                
+
             return permieter_count
         
         for i in range(len(grid)):
