@@ -23,7 +23,6 @@ class Solution:
                         pass
                 return count 
             permieter_count = 0
-            
             stack = []
             visited = set()
             stack.append((x,y))
