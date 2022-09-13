@@ -34,10 +34,10 @@ class Solution:
                 if x < 0 or y < 0 or x > len(grid)-1 or y > len(grid[0])-1:
                     continue
                 if grid[x][y] == 1:
-                    print(x,y, grid[x][y])
+                    # print(x,y, grid[x][y])
                     permieter_count += check_borders(x,y)
-                    print(permieter_count)
-                    print("land, adding to stack")
+                    # print(permieter_count)
+                    # print("land, adding to stack")
                     for x1,y1 in neighbors:
                         if (x+x1, y+y1) not in visited:
                             stack.append((x+x1, y+y1))
