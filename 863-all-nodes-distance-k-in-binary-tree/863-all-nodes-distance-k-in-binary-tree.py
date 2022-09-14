@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
+from collections import deque
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
         def bfs_to_k(some_graph, k, target):
@@ -29,10 +29,11 @@ class Solution:
             return []
         def my_graph(root):
             graph = {}
-            q = [root]
+            q = deque()
+            q.append(root)
 
             while q:
-                curr = q.pop(0)
+                curr = q.popleft()
                 if curr.val not in graph:
                     graph[curr.val] = []
                 if curr.left:
