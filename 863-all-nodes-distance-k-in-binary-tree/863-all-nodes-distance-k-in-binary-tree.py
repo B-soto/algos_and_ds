@@ -49,9 +49,9 @@ class Solution:
             return graph
         
         g = my_graph(root)
-        print(g)
-        print(k,target.val)
-        print(bfs_to_k(g,k,target.val))
+        # print(g)
+        # print(k,target.val)
+        # print(bfs_to_k(g,k,target.val))
         return bfs_to_k(g,k,target.val)
         
         
