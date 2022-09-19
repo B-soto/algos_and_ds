@@ -16,19 +16,20 @@ class Solution:
             path_dir = path_arr[0]
             path_files = path_arr[1:]
             for file in path_files:
-                text = ""
-                file_name = ""
+                text = []
+                file_name = []
                 open_bracket = False                
                 for char in file:
                     if char == '(':
                         open_bracket = True
                     if open_bracket:
-                        text += (char)
+                        text.append(char)
                     else:
-                        file_name += char
+                        file_name.append(char)
                     
-                full_file_path = path_dir+'/'+file_name
-                print(full_file_path , "-", text.strip('()'))
+                full_file_path = path_dir + '/' + ''.join(file_name)
+                text = ''.join(text).strip('()')
+                print(full_file_path , "-", text)
                 if text not in seen_dict:
                     seen_dict[text] = [full_file_path]
                 else:
