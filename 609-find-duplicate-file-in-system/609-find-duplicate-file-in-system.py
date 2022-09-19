@@ -2,7 +2,6 @@ class Solution:
   
     def findDuplicate(self, paths: List[str]) -> List[List[str]]:
         seen_dict = {}
-        duplicate_list = []
         
         for path in paths:
            
@@ -23,7 +22,7 @@ class Solution:
                         file_name.append(char)
                     
                 full_file_path = path_dir + '/' + ''.join(file_name)
-                text = ''.join(text).strip('()')
+                text = ''.join(text)
                 
                 if text not in seen_dict:
                     seen_dict[text] = [full_file_path]
