@@ -7,9 +7,9 @@ class Solution:
            
             path_arr = path.split(' ')
             path_dir = path_arr[0]
-            path_files = path_arr[1:]
+            # path_files = path_arr[1:]
             
-            for file in path_files:
+            for file in path_arr[1:]:
                 text = []
                 file_name = []
                 open_bracket = False                
