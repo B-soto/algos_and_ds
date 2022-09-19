@@ -29,7 +29,7 @@ class Solution:
                     
                 full_file_path = path_dir + '/' + ''.join(file_name)
                 text = ''.join(text).strip('()')
-                print(full_file_path , "-", text)
+                # print(full_file_path , "-", text)
                 if text not in seen_dict:
                     seen_dict[text] = [full_file_path]
                 else:
