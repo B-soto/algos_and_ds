@@ -1,7 +1,7 @@
 class Solution:
   
     def findDuplicate(self, paths: List[str]) -> List[List[str]]:
-        seen_dict = {}# word:file
+        seen_dict = {}
         duplicate_list = []
         
         for path in paths:
