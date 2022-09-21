@@ -2,7 +2,7 @@ class Solution:
     def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
         return_arr = []
         current_even_count = sum([x for x in nums if x%2==0])
-        print(current_even_count)
+        # print(current_even_count)
         
         for q in queries:
             val = q[0]
