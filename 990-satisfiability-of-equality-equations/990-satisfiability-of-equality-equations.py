@@ -2,7 +2,6 @@ from collections import deque
 class Solution:
     def equationsPossible(self, equations: List[str]) -> bool:
         def bfs_path_exists(graph, root, target):
-            print(graph, root, target)
             q = deque()
             q.append(root)
             visited = {root}
