@@ -53,6 +53,8 @@ class Solution:
             
             elif bfs_path_exists(equality_dict, x1, x2):
                 return False
+            else:
+                pass
             
         return True
             
