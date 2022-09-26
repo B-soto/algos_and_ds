@@ -48,10 +48,10 @@ class Solution:
             if x1 == x2:
                 return False
             
-            if x1 not in equality_dict or x2 not in equality_dict :
+            elif x1 not in equality_dict or x2 not in equality_dict :
                 continue
             
-            if bfs_path_exists(equality_dict, x1, x2):
+            elif bfs_path_exists(equality_dict, x1, x2):
                 return False
             
         return True
