@@ -8,13 +8,11 @@ class Solution:
             
             while q:
                 curr = q.popleft()
-                print(curr)
                 if curr == target:
                     return True
                 neighbors = graph[curr]
                 for n in neighbors:
                     if n not in visited:
-                        
                         q.append(n)
                         visited.add(n)
             return False
