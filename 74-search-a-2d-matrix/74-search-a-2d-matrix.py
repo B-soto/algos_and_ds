@@ -40,10 +40,7 @@ class Solution:
                 l = mid_col+1
         
         return False
-        # if found_col is None:
-        #     return False
-        # else:
-        #     return True
+        
         
         
         
