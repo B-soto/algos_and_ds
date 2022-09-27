@@ -31,6 +31,7 @@ class Solution:
             mid_col = ((r-l)//2) + l
             
             if arr[mid_col] == target:
+                return True
                 found_col = mid_col
                 break
             elif arr[mid_col] > target:
@@ -38,10 +39,11 @@ class Solution:
             else:
                 l = mid_col+1
         
-        if found_col is None:
-            return False
-        else:
-            return True
+        return False
+        # if found_col is None:
+        #     return False
+        # else:
+        #     return True
         
         
         
