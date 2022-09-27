@@ -1,14 +1,17 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         
-        left = 0
-        right = len(matrix) -1
         found_row = None
         found_col = None
+        
+        
+        #Find the correct Row
+        left = 0
+        right = len(matrix) -1
+        
         while left <= right:
             row_mid = ((right - left) //2) + left
             if matrix[row_mid][0] <= target <= matrix[row_mid][-1]:
-                print(f"target found in row {matrix[row_mid]}")
                 found_row = row_mid
                 break
             elif target < matrix[row_mid][0]:
@@ -19,7 +22,7 @@ class Solution:
         if found_row is None:
             return False
         
-        print("here")
+        # Find the Correct Column
         arr = matrix[found_row]
         l = 0
         r = len(arr)-1
