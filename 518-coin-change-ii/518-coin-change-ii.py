@@ -3,9 +3,7 @@ class Solution:
         cache = {}
         
         def changeWays(total, coins):
-            # print(str(coins))
             key = str(total) + '_' + str(coins)
-            # print(key)
             if key in cache:
                 return cache[key] 
             if total < 0:
@@ -27,5 +25,5 @@ class Solution:
             return left + right
         
         totalWays = changeWays(amount, AllCoins)
-        print(totalWays)
+        # print(totalWays)
         return totalWays
