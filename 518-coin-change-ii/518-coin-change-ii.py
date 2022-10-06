@@ -16,9 +16,9 @@ class Solution:
             
             left = changeWays(total-coins[-1], coins)
             
-            last_coin = coins.pop()
-            right = changeWays(total, coins)
-            coins.append(last_coin)
+            # last_coin = coins.pop()
+            right = changeWays(total, coins[0:-1])
+            # coins.append(last_coin)
             
             
             cache[key] = left+right
