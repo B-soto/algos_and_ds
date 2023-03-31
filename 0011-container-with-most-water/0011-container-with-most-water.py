@@ -36,10 +36,9 @@ class Solution:
         r = len(height) -1
         
         
-        while l <= r:
+        while l < r:
             min_height = min(height[l], height[r]) 
             current_area = min_height * (r-l)
-            print(l,r,current_area)
             max_area = max(max_area, current_area)
         
             if height[l] <= height[r]:
