@@ -6,11 +6,11 @@ class Solution:
 
         curr_str = ""
         for p in s:
-            if p == "(" and count == 0:
+            if p == "(":
+                if count > 0:
+                    curr_str +="("
                 count +=1
-            elif p == "(" and count > 0:
-                count +=1
-                curr_str +="("
+                
             elif p == ")" and count > 1:
                 count -=1
                 curr_str += ")"
