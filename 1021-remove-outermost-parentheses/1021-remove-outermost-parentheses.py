@@ -14,7 +14,7 @@ class Solution:
             elif p == ")" and count > 1:
                 count -=1
                 curr_str += ")"
-            elif p == ")" and count == 1:
+            else:
                 count -=1
                 return_list.append(curr_str)
                 curr_str = ""
