@@ -15,7 +15,6 @@ class Solution:
                 rtn_list.append(curr_str)
                 return
 
-            
             #recursive case
             temp_string = curr_str
             for letter in number_dict[digits[index]]:
