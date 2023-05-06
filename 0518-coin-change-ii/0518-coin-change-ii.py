@@ -33,8 +33,8 @@ class Solution:
             AllCoins.append(last_coin)
             
             
-            if key not in cache:
-                cache[key] = right + left
+            
+            cache[key] = right + left
             return right + left
             
         
