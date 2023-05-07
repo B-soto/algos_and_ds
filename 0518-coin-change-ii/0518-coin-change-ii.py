@@ -1,20 +1,19 @@
 class Solution:
     def change(self, amount: int, AllCoins: List[int]) -> int:
-        grid = [0 for _ in range(amount +1)]
-        grid[0] = 1
-        
+        row = [0 for x in range(amount +1)]
+        row[0] = 1
         
         for coin in AllCoins:
-            for i in range(coin, len(grid)):
-                grid[i] = grid[i] + grid[i-coin]
-        return grid[-1]
+            for i in range(coin, len(row)):
+                row[i] = row[i] + row[i- coin]
         
+        return row[-1]
 #           0. 1. 2. 3. 4. 5
 #         |----------------------
 #     []  | 1  0. 0. 0  0. 0
-#     [1] | 1. 1. 1. 1. 1. 1
-#    [1,2]| 1  1  2  2  3  3 
-#  [1,2,5]|                4
+#     [1] |           
+#    [1,2]| 
+#  [1,2,5]|
         
     #forumla = up row, + row - new_coin value
     
