@@ -2,12 +2,11 @@ class Solution:
     def change(self, amount: int, AllCoins: List[int]) -> int:
         grid = [0 for _ in range(amount +1)]
         grid[0] = 1
-        print(grid)
+        
         
         for coin in AllCoins:
             for i in range(coin, len(grid)):
                 grid[i] = grid[i] + grid[i-coin]
-        print(grid)
         return grid[-1]
         
 #           0. 1. 2. 3. 4. 5
