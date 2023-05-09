@@ -41,7 +41,7 @@ class Solution:
                 
             left +=1
             
-        print(matrix)
+        
         return matrix
             
                 
