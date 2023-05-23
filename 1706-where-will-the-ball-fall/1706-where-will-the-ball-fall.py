@@ -28,13 +28,6 @@ class Solution:
             return -1
 
 
-            #do we go right if valid
+            
 
-
-
-
-
-
-        for i in range(cols):
-            answers.append(dfs(0,i))
-        return answers
+        return [dfs(0,i) for i in range(cols)]
