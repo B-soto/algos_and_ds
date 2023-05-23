@@ -1,34 +1,40 @@
 class Solution:
     def findBall(self, grid: List[List[int]]) -> List[int]:
-        
+      
+    
+    
+        answers = []
         rows = len(grid)
         cols = len(grid[0])
-        cache = {}
-        
+
         def dfs(r,c):
-            if (r,c) in cache:
-                return cache[(r,c)]
-            if c < 0 or c >=cols:
+            if c >= cols or c < 0:
                 return -1
+
+
+            # Reached target
             if r == rows:
                 return c
+
+
+            #recusrive Cases
+            # Can we go left if valid
             if grid[r][c] == 1:
-                if c+1 < cols and grid[r][c+1] == -1:
-                    return -1
-                else:
-                    ans = dfs(r+1, c+1)
-                    cache[(r,c)] = ans
-                    return ans
+                if c + 1 < cols and grid[r][c+1] != -1:
+                    return dfs(r+1, c+1)
             else:
-                if c-1 >= 0 and grid[r][c-1] == 1:
-                    return -1
-                else:
-                    ans = dfs(r+1,c-1)
-                    cache[(r,c)] = ans
-                    return ans
-                
-        return [dfs(0,i) for i in range(cols)]
-                    
-                
-            
-        
+                if c - 1 >= 0 and grid[r][c-1] != 1:
+                    return dfs(r+1,c-1)
+            return -1
+
+
+            #do we go right if valid
+
+
+
+
+
+
+        for i in range(cols):
+            answers.append(dfs(0,i))
+        return answers
