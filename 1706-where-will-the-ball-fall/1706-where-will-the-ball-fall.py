@@ -1,9 +1,7 @@
 class Solution:
     def findBall(self, grid: List[List[int]]) -> List[int]:
       
-    
-    
-        answers = []
+
         rows = len(grid)
         cols = len(grid[0])
 
