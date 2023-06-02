@@ -11,11 +11,7 @@ class Solution:
             else:
                 letter_freq[letters] = [word]
                 
-        rtn_arr = []
-        for k,v in letter_freq.items():
-            rtn_arr.append(v)
-            
-        return rtn_arr
+        return letter_freq.values()
             
         
 #         letter_freq = {{e:1,a:1,t:1}: [eat ,tea, ate]
