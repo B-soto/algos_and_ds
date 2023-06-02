@@ -29,8 +29,8 @@ class Solution:
                 # bottom left -> top left
                 matrix[top][l+i] = temp3
             
-                for row in matrix:
-                    print(row)
+#                 for row in matrix:
+#                     print(row)
                 
             l += 1
             r -= 1
