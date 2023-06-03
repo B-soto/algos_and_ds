@@ -37,20 +37,16 @@ class Solution:
             r,c = q.popleft()
             if (r,c) in visited:
                 continue
+            if r < 0 or r >= len(board) or c < 0 or c >= len(board[0]):
+                continue
+            if board[r][c] == 'X':
+                continue
                 
             visited.add((r,c))
-            
-            if r+1 < len(board) and board[r+1][c] == 'O':
-                q.append([r+1,c])
-                
-            if r -1 >= 0 and board[r-1][c] == 'O':
-                q.append([r-1,c])
-            
-            if c + 1 < len(board[0]) and board[r][c+1] == 'O':
-                q.append([r,c+1])
-                
-            if c -1 >= 0 and board[r][c-1]  == 'O':
-                q.append([r,c-1])
+            q.append((r+1,c))
+            q.append((r-1,c))
+            q.append((r,c+1))
+            q.append((r,c-1))
                 
         print(visited)
         for i in range(len(board)):
