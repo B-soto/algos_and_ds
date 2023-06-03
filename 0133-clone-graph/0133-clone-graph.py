@@ -33,10 +33,9 @@ class Solution:
             for n in curr_node.neighbors:
                 
                 if n.val not in graph:
-                    n_copy = Node(n.val)
-                    graph[n.val] = n_copy
-                else:
-                    n_copy = graph[n.val]
+                    graph[n.val] = Node(n.val)
+                
+                n_copy = graph[n.val]
                
                 curr_copy.neighbors.append(n_copy)
                 if n.val not in visited:
