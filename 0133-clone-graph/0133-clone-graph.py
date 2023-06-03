@@ -22,19 +22,15 @@ class Solution:
         while stack:
             
             curr_node = stack.pop()
-            # print(curr_node.val)
+            
             
             if curr_node.val not in graph:
-                curr_copy = Node(curr_node.val)
-                graph[curr_node.val] = curr_copy
-            else:
-                curr_copy = graph[curr_node.val]
-                
-            # visited.add(curr_node.val)
+                graph[curr_node.val] = Node(curr_node.val)
             
-            # print(node.val, node.neighbors)
+            curr_copy = graph[curr_node.val]
+                
+
             for n in curr_node.neighbors:
-                # print(n.val)
                 
                 if n.val not in graph:
                     n_copy = Node(n.val)
@@ -46,10 +42,6 @@ class Solution:
                 if n.val not in visited:
                     stack.append(n)
                     visited.add(n.val)
-                
-        
-#         print(visited)
-#         for k,v in graph.items():
-#             print(v.val,v.neighbors)
+
         
         return graph[1]
