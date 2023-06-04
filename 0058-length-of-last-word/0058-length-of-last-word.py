@@ -4,7 +4,7 @@ class Solution:
         
         
         s = s[::-1]
-        s = s.strip() + ' ' 
+        s = s.strip()
         
         if len(s) == 1:
             return 1
@@ -12,7 +12,8 @@ class Solution:
         rp = 0
         for lp in range(len(s)):
             if s[lp] == ' ':
+                lp -= 1
                 break
         print(lp,rp)
-        return(lp-rp)
+        return((lp-rp)+1)
                 
