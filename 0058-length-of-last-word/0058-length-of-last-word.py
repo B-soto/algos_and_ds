@@ -13,6 +13,7 @@ class Solution:
         for lp in range(len(s)):
             if s[lp] == ' ':
                 break
-        print(lp,rp)
+                
+        # print(lp,rp)
         return(lp-rp)
                 
