@@ -10,33 +10,33 @@ class Solution:
             return TreeNode(val)
         
         
-        def dfs(node, parent):
+        def dfs(node):
             #baseCase
             if node is None:
                 newNode = TreeNode(val)
-                
-                if val > parent.val:
-                    parent.right = newNode
-                else:
-                    parent.left = newNode
-                return
+                return newNode
             
             #recursive cases
-            parent = node
             
             if val < node.val:
             #go left
-            
-                dfs(node.left, parent)
+                newNode = dfs(node.left)
             else:
             #go right
-                dfs(node.right, parent)
+                newNode = dfs(node.right)
+                
+            if not newNode:
+                return None
             
+            if val > node.val:
+                node.right = newNode
+            else:
+                node.left = newNode
             
-            return
+            return None
             
         
-        dfs(root,None)
+        dfs(root)
         
         return root
         
