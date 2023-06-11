@@ -18,7 +18,7 @@ class Solution:
 
                 word_length = len(word)
                 if s[i:word_length+i] == word and dfs(i+word_length):
-                    cache[i] = True
+                    # cache[i] = True
                     return True
             
             cache[i] = False
