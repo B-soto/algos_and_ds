@@ -15,7 +15,7 @@ class Solution:
         curr = grid
         total = 0
         
-        while curr:
+        while curr[0] != []:
             # print(curr)
             temp = []
             curr_grid_max = None
@@ -50,8 +50,8 @@ class Solution:
                 #     curr_grid_max = max(curr[curr_grid_max[0]][curr_grid_max[1]], curr[r][curr_row_max])
             #update total
             total += curr[curr_grid_max[0]][curr_grid_max[1]]
-            if temp[0] == []:
-                break
+            # if temp[0] == []:
+            #     break
             
             curr = temp
             
