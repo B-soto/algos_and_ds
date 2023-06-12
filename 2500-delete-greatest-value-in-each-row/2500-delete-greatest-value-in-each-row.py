@@ -16,7 +16,7 @@ class Solution:
         total = 0
         
         while curr:
-            print(curr)
+            # print(curr)
             temp = []
             curr_grid_max = None
             
