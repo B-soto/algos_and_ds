@@ -9,10 +9,13 @@ class Solution:
         count = 0
         for i in range(len(s)-2):
             seen_set = set()
+            unique = 0
             for x in range(3):
-                seen_set.add(s[i+x])
+                if s[i+x] not in seen_set:
+                    unique += 1
+                    seen_set.add(s[i+x])
                 
-            if len(seen_set) == 3:
+            if unique == 3:
                 count +=1
         return count
                 
