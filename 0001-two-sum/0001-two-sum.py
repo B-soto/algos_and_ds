@@ -1,18 +1,15 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {}
         
-            seen_set = {}
-            # [2,7,11,15]
-            
-            for i in range(len(nums)):
-                num = nums[i]
-                comp_value = target - num
+        for i, num in enumerate(nums):
+            comp = target - num
+            if comp in seen:
+                return [seen[comp], i]
+            else:
+                seen[num] = i
+        return
                 
-                if comp_value in seen_set:
-                    return [i, seen_set[comp_value]]
-                else:
-                    seen_set[num] = i
-            
             
             
         
